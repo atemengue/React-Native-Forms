@@ -36,7 +36,7 @@ class Login1 extends Component {
                         </View>
                     </View>
                 </View>
-                <Footer />
+                <Footer footerText={'Don\'t have an account? Sign UP'} />
             </View>
         );
     }

@@ -1,13 +1,13 @@
 import React from 'react';
 import { View, Text } from 'react-native';
 
-const Footer = () => {
+const Footer = (props) => {
 
     const {footerStyle } = styles;
 
     return (
         <View style={footerStyle}>
-            <Text>Don't have an account? Sign UP</Text>
+            <Text>{props.footerText}</Text>
         </View>
     );
 };

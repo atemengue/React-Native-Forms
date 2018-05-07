@@ -1,23 +1,21 @@
-import React, { Component } from 'react';
-import { View, Text, TextInput, CheckBox, Button  } from 'react-native';
+import React, {Component} from 'react';
+import { View, Text, TextInput, Button} from 'react-native';
 import Footer from './Footer';
 
-class Login1 extends Component {
+class SignUp extends Component {
 
-    onPressLearnMore (){
+    onPressLearnMore () {
         return( <Text>
                  reggis atemengue
         </Text>);
     }
 
-    render () {
-
-        const { viewStyle, textStyle , textInputStyle, viewRow, buttonStyle , ortherView } = styles;
+    render(){
+        const { viewStyle, textStyle , verticalStyle, textInputStyle, viewRow, buttonStyle } = styles;
         return(
             <View>
                 <View style={viewStyle}>
-                    <Text style={textStyle}>Log In 2</Text>
-                  
+                    <Text style={textStyle}>Sign Up 2</Text>
                     <View>
                         
                         <View style={buttonStyle}>
@@ -46,45 +44,66 @@ class Login1 extends Component {
                         </View>
 
                     </View>
-                    <View style={ buttonStyle, ortherView}>
-                        <Text style={{borderBottomWidth:2 , width:80 }}></Text>
-                        <Text style={{paddingLeft: 15 , paddingRight: 15}}>OR</Text>
-                        <Text style={{borderBottomWidth:2 , width:80 }}></Text>
+                    <View style={verticalStyle} >
+                        <View style={{flex: 1, marginLeft: 5}}>
+                            <Text>First Name</Text>               
+                            <TextInput style={textInputStyle} underlineColorAndroid='transparent' />                   
+                        </View>
+                        <View style={{flex: 1 , marginLeft: 5}}>
+                            <Text>Last Name</Text>               
+                            <TextInput style={textInputStyle} underlineColorAndroid='transparent'/>                   
+                        </View>
                     </View>
                     <View>
-                        <TextInput style={textInputStyle} underlineColorAndroid='transparent'  placeholder="Email" inlineImageLeft="search_icon"/>
-                        <TextInput style={textInputStyle}  underlineColorAndroid='transparent' placeholder="Password"/>
-                    </View>
-                    <View style={viewRow}>
-                        <View style={viewRow}>
-                            <CheckBox />
-                            <Text style={{marginTop: 2}}>Remenber Me</Text>
+                        <View>
+                            <Text>Username</Text>               
+                            <TextInput style={textInputStyle} underlineColorAndroid='transparent'/>  
                         </View>
                         <View>
-                            <Button style={buttonStyle}
+                            <Text>Email</Text>               
+                            <TextInput style={textInputStyle} underlineColorAndroid='transparent'/>  
+                        </View>
+                        <View>
+                            <Text>Password</Text>               
+                            <TextInput style={textInputStyle} underlineColorAndroid='transparent'/>  
+                        </View>
+                    </View>
+                    <View style={viewRow}>
+                        <Text style={{flex:1}}>By signing up, you agree to our termes of service and privacy policy </Text>
+                        <View style={{flex:1}}>
+                            <Button
                                 onPress={this.onPressLearnMore}
-                                title="LOG IN"
+                                title="Sign UP"
                                 color="#841584"
                                 accessibilityLabel="Learn more about this purple button"
                             />
                         </View>
                     </View>
                 </View>
-                <Footer footerText={'Don\'t have an account? Sign UP'} />
+                <Footer footerText={'Have an account? Login'} />
             </View>
         );
     }
-
 }
 
 const styles = {
     viewStyle: {
         margin: 20
     },
-
     textStyle: {
         fontSize:18,
         marginBottom: 10
+    },
+
+    verticalStyle: {
+        flexDirection:'row',
+        alignItems: 'center',
+        
+    },
+
+    buttonStyle: {
+        marginBottom :10,
+        marginTop:10
     },
 
     textInputStyle: {
@@ -97,26 +116,13 @@ const styles = {
         paddingLeft: 10,
         height:40
     },
-
     viewRow: {
         flexDirection:'row',
         alignItems: 'center',
         justifyContent: 'space-between',
         marginTop: 5,
     },
-
-    buttonStyle: {
-        marginBottom :10,
-        marginTop:10
-    },
-
-    ortherView: {
-        flexDirection:'row',
-        justifyContent:'center',
-        alignItems:'center',
-        marginBottom:10,
-        marginTop:10,
-    }
 };
 
-export default Login1;
+
+export default  SignUp;
