@@ -12,6 +12,8 @@ const Header = (props) => {
     );
 };
 
+
+
 const styles = {
     textStyle: {
         fontSize: 20,
