@@ -2,11 +2,9 @@ import React, { Component } from 'react';
 import {View, Text , TextInput,Button } from 'react-native' ;
 import Footer from './Footer';
 
-
 class Password extends Component{
-
     resetPass() {
-        return <Text>RegisAtemengue</Text>;
+        return 0;
     }
 
     render(){
@@ -56,9 +54,6 @@ const styles = {
         alignItems: 'flex-end',
         alignContent:'flex-end'
     }
-
-
-
 };
 
 export default Password;

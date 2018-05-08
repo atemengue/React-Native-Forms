@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import {View, Text , TextInput,Button } from 'react-native' ;
+import {View, Text,Button } from 'react-native' ;
 import Footer from './Footer';
 
 
@@ -10,7 +10,7 @@ class CheckEmail extends Component{
     }
 
     render(){
-        const {textStyle , viewStyle , textInputStyle, Reset} = styles;
+        const {textStyle , viewStyle, Reset} = styles;
         return(
             <View>
                 <View style={viewStyle}>
@@ -38,18 +38,6 @@ const styles = {
     viewStyle: {
         margin: 20
     },
-
-    textInputStyle: {
-        borderTopWidth: 1 ,
-        borderLeftWidth: 1 , 
-        borderRightWidth: 1 ,
-        borderBottomWidth: 1,
-        marginTop: 10,
-        marginBottom: 5 ,
-        paddingLeft: 10,
-        height:40
-    },
-
     Reset: {
         justifyContent: 'center',
         alignItems: 'center',
